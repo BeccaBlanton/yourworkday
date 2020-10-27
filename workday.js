@@ -19,6 +19,8 @@ setInterval(updateTime, 1000);
 updateTime();
 
 //Function to pull data hour from each time block to assign hour compared to current hour of day and change the background of each time block
+var currentHour = moment().format('H')
+console.log(currentHour)
     $(".time-block").each(function() {
         if(parseInt($(this).data("hour")) < currentHour){
             $(this).addClass("past")
