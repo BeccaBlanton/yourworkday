@@ -15,4 +15,4 @@ YourWorkDay is a simple day planner interface to write all your todos of the day
 
 [Go to Live YourWorkday Page](https://beccablanton.github.io/yourworkday/)
 
-![Website snapshot](assets/yourworkdaywebsiteexample.png)
+![Website snapshot](Assets/yourworkdaywebsiteexample.png)
