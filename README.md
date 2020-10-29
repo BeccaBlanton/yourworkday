@@ -1,4 +1,4 @@
-# yourworkday
+# YourWorkDay
 
 ## What it is
 

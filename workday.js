@@ -20,53 +20,24 @@ console.log(currentHour)
             } else {
                 $(this).addClass("future")
             }
-            console.log(parseInt($(this).data("hour")))
         })
         
-//making each button link to text box and upload onto local storage
-/*$('button').each.on("click", function(event){
-localStorage.setItem(this.id,$('form').val())
-})*/
+//pulls up text from local storage to fill text area from previous input
+var textValues=JSON.parse(localStorage.getItem("textareas"))
 
-$('form').each(function(el){
-    console.log(this)
-    $(this).find('input[type="text"]').val(inputValues[this.id])
-    console.log(this.id)
+$("form").each(function(el){
+    $(this).find('textarea[type="text"]').val(textValues[this.id])
 })
 
-  $('form').on('submit'), function(e){
+//sets all buttons on each time block to submit corresponding text area. 
+//saves text in text areas into local storage
+  $('form').on('submit', function(e){
       e.preventDefault()
       var item= this.id
-      var val = $(this).find('inputs').val()
-      inputValues[item] = val
-        localStorage.setItem('inputs', JSON.stringify(inputValues))
-      
-  }
-  var inputValues = JSON.parse(localStorage.getitem("inputs"));
-  console.log("inputs")
-
-
-  //localStorage.setItem(this.id, $(this).find('input').val() )
-    //  $(this).find("input").val
-      //console.log(this)
-/*document.getElementById("btn1").addEventListener("click", function(event){
-    event.preventDefault();
-    localStorage.setItem("textBox1", JSON.stringify(textBox1));
-    var eventCreated1 = JSON.parse(localStorage.getitem("textBox1"));
-    textBox1.textCont = eventCreated1
-    console.log(event)
-    console.log(textBox1)
-    console.log(eventCreated1)
-$("#btn1").on("", function(event) {
-    alert("I've been clicked!");
-    event.preventDefault();
-    localStorage.setItem("textBox1", JSON.stringify(textBox1));
-    
-    textBox1.textContent = eventCreated1
-    console.log(event)
-    console.log(textBox1)
-    console.log(eventCreated1)
-})
-//save text to localstorage.
-
-// data goes back and stays in text*/
+      console.log(item)
+      var val = $(this).find('textarea').val()
+      textValues[item] = val
+      console.log(textValues[item])
+      console.log(textValues)
+      localStorage.setItem('textareas', JSON.stringify(textValues))
+  })
