@@ -26,12 +26,13 @@ console.log(currentHour)
 var textValues=JSON.parse(localStorage.getItem("textareas"))
 
 $("form").each(function(){
-    var item = this.id
-    $(this).find('textarea[type="text"]').val(textValues[item])
     if(!item){
         item=[]
         console.log(item)
     }
+    var item = this.id
+    $(this).find('textarea[type="text"]').val(textValues[item])
+    
 })
 
 //sets all buttons on each time block to submit corresponding text area. 
