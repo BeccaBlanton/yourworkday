@@ -27,11 +27,10 @@ var textValues=JSON.parse(localStorage.getItem("textareas"))
 
 $("form").each(function(){
     var item = this.id
-    var input = textValues[item]
-    $(this).find('textarea[type="text"]').val(input)
-    if(!input){
-        input=""
-        console.log(input)
+    $(this).find('textarea[type="text"]').val(textValues[item])
+    if(!item){
+        item=[]
+        console.log(item)
     }
 })
 
