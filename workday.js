@@ -25,16 +25,6 @@ console.log(currentHour)
 //pulls up text from local storage to fill text area from previous input
 var textValues=JSON.parse(localStorage.getItem("textareas"))
 
-$("form").each(function(){
-    if(!item){
-        item=[]
-        console.log(item)
-    }
-    var item = this.id
-    $(this).find('textarea[type="text"]').val(textValues[item])
-    
-})
-
 //sets all buttons on each time block to submit corresponding text area. 
 //saves text in text areas into local storage
   $('form').on('submit', function(e){
@@ -47,3 +37,12 @@ $("form").each(function(){
       console.log(textValues)
       localStorage.setItem('textareas', JSON.stringify(textValues))
   })
+  $("form").each(function(){
+    var item = this.id
+    if(!textValues[item]){
+        textValues[item] = "Let's Plan Something!"
+    } 
+   $(this).find('textarea[type="text"]').val(textValues[item])
+   console.log(textValues[item])
+    
+})
