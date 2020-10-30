@@ -27,8 +27,12 @@ var textValues=JSON.parse(localStorage.getItem("textareas"))
 
 $("form").each(function(){
     var item = this.id
-    $(this).find('textarea[type="text"]').val(textValues[item])
-    console.log(this.id)
+    var input = textValues[item]
+    $(this).find('textarea[type="text"]').val(input)
+    if(!input){
+        input=""
+        console.log(input)
+    }
 })
 
 //sets all buttons on each time block to submit corresponding text area. 
