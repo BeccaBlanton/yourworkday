@@ -11,8 +11,24 @@ YourWorkDay is a simple day planner interface to write all your todos of the day
 ** time blocks will change color depending on current time of day.
 * editable time blocks, just press save to the button to the right and your data will be saved even when you refresh.
 
+## Technologies Used
+
+* html
+* css
+* JavaScript
+* moment.js
+
+
 ## Website Example and Link
 
 [Go to Live YourWorkday Page](https://beccablanton.github.io/yourworkday/)
 
 ![Website snapshot](Assets/yourworkdaywebsite.png)
+
+## License
+
+MIT License, see License file for detials
+
+### Contact
+
+Contact [Becca Blanton](https://github.com/BeccaBlanton) for details.

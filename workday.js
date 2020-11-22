@@ -124,26 +124,6 @@ console.log(currentHour)
   });
 
   textArea10.val(localStorage.getItem("btn10"))
-//unmarked functions trying to pull each more programatically due to erroring on load.
-  //pulls up text from local storage to fill text area from previous input
-/*var textValues=JSON.parse(localStorage.getItem("textareas"))
 
-$("form").each(function(el){
-    $(this).find('textarea[type="text"]').val(textValues[this.id])
-    console.log(this.id)
-})
-
-//sets all buttons on each time block to submit corresponding text area. 
-//saves text in text areas into local storage
-  $('form').on('submit', function(e){
-      e.preventDefault()
-      var item= this.id
-      console.log(item)
-      var val = $(this).find('textarea').val()
-      textValues[item] = val
-      console.log(textValues[item])
-      console.log(textValues)
-      localStorage.setItem('textareas', JSON.stringify(textValues))
-  })*/
 
 
